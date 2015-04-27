@@ -8,4 +8,9 @@ class MyHash
     @keys.push(key)
     @values.push(value)
   end
+
+  define_method(:fetch) do |key|
+    number = @keys.index(key)
+    @values[number]
+  end
 end
