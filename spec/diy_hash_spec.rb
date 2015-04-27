@@ -42,12 +42,14 @@ describe(MyHash) do
     end
   end
 
-  describe("#combine") do
-    it("returning in 'key => value' format") do
-      test_hash= MyHash.new()
-      test_hash.store("kitten", "cute")
-      test_hash.store("dog", "cool")
-      expect(test_hash.combine()).to(eq(["kitten => cute", "dog => cool"]))
+  describe("#merge") do
+    it("merges two MyHash objects together") do
+      animals = MyHash.new()
+
+      animals.store("horse", "brown")
+      buildings = MyHash.new()
+      buildings.store("a", "x")
+      expect(animals.merge(buildings)).to(eq(["horse => brown", "a => x"]))
     end
   end
 end
