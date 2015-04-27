@@ -13,4 +13,8 @@ class MyHash
     number = @keys.index(key)
     @values[number]
   end
+
+  define_method(:has_key?) do |key|
+    @keys.include?(key)
+  end
 end
