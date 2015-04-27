@@ -25,4 +25,17 @@ class MyHash
   define_method(:length) do
     @keys.length()
   end
+
+  define_method(:combine) do
+    new_array = Array.new()
+    x = @keys.length()
+    x.times() do |time|
+      rocket_arrow = @keys[time].concat(" => ").concat(@values[time])
+      new_array.push(rocket_arrow)
+    end
+    new_array
+  end
+
+
+
 end

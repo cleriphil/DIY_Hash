@@ -41,4 +41,13 @@ describe(MyHash) do
       expect(test_hash.length()).to(eq(2))
     end
   end
+
+  describe("#combine") do
+    it("returning in 'key => value' format") do
+      test_hash= MyHash.new()
+      test_hash.store("kitten", "cute")
+      test_hash.store("dog", "cool")
+      expect(test_hash.combine()).to(eq(["kitten => cute", "dog => cool"]))
+    end
+  end
 end
