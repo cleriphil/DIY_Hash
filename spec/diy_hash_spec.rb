@@ -24,4 +24,12 @@ describe(MyHash) do
       expect(test_hash.has_key?("kitten")).to(eq(true))
     end
   end
+
+  describe("#has_value?") do
+    it("returns true if object contains value") do
+      test_hash = MyHash.new()
+      test_hash.store("kitten", "cute")
+      expect(test_hash.has_value?("cute")).to(eq(true))
+    end
+  end
 end
