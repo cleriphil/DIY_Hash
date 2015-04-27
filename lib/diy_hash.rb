@@ -20,6 +20,9 @@ class MyHash
 
   define_method(:has_value?) do |value|
     @values.include?(value)
+  end
 
+  define_method(:length) do
+    @keys.length()
   end
 end

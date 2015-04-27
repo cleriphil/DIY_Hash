@@ -32,4 +32,13 @@ describe(MyHash) do
       expect(test_hash.has_value?("cute")).to(eq(true))
     end
   end
+
+  describe("#length") do
+    it("returns the lengths of MyHash") do
+      test_hash = MyHash.new()
+      test_hash.store("kitten", "cute")
+      test_hash.store("dog", "cool")
+      expect(test_hash.length()).to(eq(2))
+    end
+  end
 end
